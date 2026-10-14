@@ -66,7 +66,7 @@
     <!--begin::Accessibility Features-->
     <!-- Skip links will be dynamically added by accessibility.js -->
     <meta name="supported-color-schemes" content="light dark" />
-    <link rel="preload" href="./dist/css/adminlte.css" as="style" />
+    <link rel="preload" href="{{ asset('dist/css/adminlte.css') }}" as="style" />
 
     <!--end::Accessibility Features-->
 
@@ -87,7 +87,7 @@
     <!--end::Third Party Plugin(Bootstrap Icons)-->
 
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="./dist/css/adminlte.css" />
+    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.css') }}" />
     <!--end::Required Plugin(AdminLTE)-->
 </head>
 <!--end::Head-->
@@ -173,14 +173,14 @@
                     <!--begin::User Menu Dropdown-->
                     <li class="nav-item dropdown user-menu">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img src="./dist/assets/img/user2-160x160.jpg"
+                            <img src="{{ asset('dist/assets/img/user2-160x160.jpg') }}"
                                 class="user-image rounded-circle shadow" alt="Alexander Pierce" />
                             <span class="d-none d-md-inline">Alexander Pierce</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                             <!--begin::User Image-->
                             <li class="user-header text-bg-primary">
-                                <img src="./dist/assets/img/user2-160x160.jpg"
+                                <img src="{{ asset('dist/assets/img/user2-160x160.jpg') }}"
                                     class="rounded-circle shadow" alt="Alexander Pierce" />
                                 <p>
                                     Alexander Pierce - Web Developer
@@ -227,7 +227,7 @@
                 <!--begin::Brand Link-->
                 <a href="./index.html" class="brand-link">
                     <!--begin::Brand Image-->
-                    <img src="./dist/assets/img/AdminLTELogo.png" alt="AdminLTE Logo"
+                    <img src="{{ asset('dist/assets/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
                         class="brand-image opacity-75 shadow" />
                     <!--end::Brand Image-->
                     <!--begin::Brand Text-->
@@ -250,7 +250,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('tables') }}" class="nav-link">
                                 <i class="nav-icon bi bi-file-earmark-text"></i>
                                 <p>
                                     Tables
@@ -258,7 +258,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('datatables') }}" class="nav-link">
                                 <i class="nav-icon bi bi-table"></i>
                                 <p>
                                     DataTables
@@ -438,7 +438,7 @@
     <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="./js/adminlte.js"></script>
+    <script src="{{ asset('dist/js/adminlte.js') }}"></script>
 
     <!--end::Required Plugin(AdminLTE)-->
     <!--begin::OverlayScrollbars Configure-->
