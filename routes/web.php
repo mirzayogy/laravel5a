@@ -12,3 +12,4 @@ Route::view('/edit', 'edit')->name('edit');
 Route::view('/datatables', 'datatables')->name('datatables');
 
 Route::resource('periode', PeriodeController::class)->except('show');
+Route::get('/laporan/periode', [PeriodeController::class, 'cetak'])->name('laporan.periode');
