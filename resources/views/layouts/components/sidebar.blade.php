@@ -21,7 +21,7 @@
             <!--begin::Sidebar Menu-->
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" data-accordion="false" id="navigation">
                 <li class="nav-item">
-                    <a href="/" class="nav-link active">
+                    <a href="/" class="nav-link {{ request()->is('/') ? 'active' : '' }}">
                         <i class="nav-icon bi bi-speedometer"></i>
                         <p>Dashboard</p>
                     </a>
@@ -42,32 +42,20 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item {{ request()->routeIs('periode.*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->routeIs('periode.*') ? 'active' : '' }}">
                         <i class="nav-icon bi bi-box-seam-fill"></i>
                         <p>
                             Data Master
-                            <span class="nav-badge badge text-bg-secondary me-3">12</span>
                             <i class="nav-arrow bi bi-chevron-right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('periode.index') }}" class="nav-link">
+                            <a href="{{ route('periode.index') }}"
+                                class="nav-link {{ request()->routeIs('periode.*') ? 'active' : '' }}">
                                 <i class="nav-icon bi bi-circle"></i>
                                 <p>Periode</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Master 1</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon bi bi-circle"></i>
-                                <p>Master 2</p>
                             </a>
                         </li>
                     </ul>

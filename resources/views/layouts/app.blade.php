@@ -10,16 +10,16 @@
         @include('layouts.components.sidebar')
         <!--begin::App Main-->
         <main class="app-main">
-            @include('layouts.components.content-header')
-            <!--begin::App Content-->
-            <div class="app-content">
-                <!--begin::Container-->
+            <div class="app-content-header">
                 <div class="container-fluid">
-                   @yield('content')
+                    @yield('breadcrumb')
                 </div>
-                <!--end::Row-->
             </div>
-            <!--end::Container-->
+            <div class="app-content">
+                <div class="container-fluid">
+                    @yield('content')
+                </div>
+            </div>
     </div>
     <!--end::App Content-->
     </main>

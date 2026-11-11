@@ -11,4 +11,4 @@ Route::view('/tables', 'tables')->name('tables');
 Route::view('/edit', 'edit')->name('edit');
 Route::view('/datatables', 'datatables')->name('datatables');
 
-Route::resource('periode', PeriodeController::class);
+Route::resource('periode', PeriodeController::class)->except('show');
